@@ -24,7 +24,7 @@ $(function () {
             var json = {name: name, phone: phone, email: email, message: message}
             $.ajax({
                 // --- CHANGE THIS LINE TO YOUR OWN API GATEWAY  -------- 
-                url: "https://03iiekfg27.execute-api.eu-west-1.amazonaws.com/FinalStage",  //https://8mgsob409c.execute-api.eu-west-1.amazonaws.com/testfunction", //https://4bb3fnmdoj.execute-api.eu-west-1.amazonaws.com/LambdaforApi
+                url: "https://72yt39ef87.execute-api.eu-west-1.amazonaws.com/default/portfolio_website_function",  //https://8mgsob409c.execute-api.eu-west-1.amazonaws.com/testfunction", //https://4bb3fnmdoj.execute-api.eu-west-1.amazonaws.com/LambdaforApi
                 // ------------------------------------------------------  
                 type: "POST",
                 data: JSON.stringify(json),
