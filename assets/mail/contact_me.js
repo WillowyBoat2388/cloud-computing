@@ -1,4 +1,6 @@
+
 $(function () {
+      console.log("winter")
     $(
         "#contactForm input,#contactForm textarea,#contactForm button"
     ).jqBootstrapValidation({
@@ -9,13 +11,14 @@ $(function () {
         submitSuccess: function ($form, event) {
             event.preventDefault(); // prevent default submit behaviour
             // get values from FORM
-            console.log('Capturing Data')
+            console.log('Capturing Data');
             var name = $("input#name").val();
             var email = $("input#email").val();
             var phone = $("input#phone").val();
             var message = $("textarea#message").val();
             var firstName = name; // For Success/Failure Message
             // Check for white space in name for Success/Fail message
+            console.log(message);
             if (firstName.indexOf(" ") >= 0) {
                 firstName = name.split(" ").slice(0, -1).join(" ");
             }
@@ -32,6 +35,7 @@ $(function () {
                 success: function () {
                     // Success message
                     console.log("Success")
+                    console.log("#success")
                     $("#success").html("<div class='alert alert-success'>");
                     $("#success > .alert-success")
                         .html(
@@ -86,3 +90,5 @@ $(function () {
 $("#name").focus(function () {
     $("#success").html("");
 });
+
+console.log("hello mister niga");
